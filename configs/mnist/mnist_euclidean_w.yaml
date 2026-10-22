@@ -1,0 +1,32 @@
+seed: 7
+dataset:
+  name: mnist
+  root: data/mnist
+  n_samples: 60000
+  n_points: 64
+barycenter_path: assets/mnist_barycenter_n64.npy
+source:
+  type: barycentric
+  noise_std: 0.1
+model:
+  in_dim: 2
+  time_dim: 32
+  hidden_dim: 256
+  depth: 4
+ot:
+  inner: w
+  outer: euclidean
+  method: emd
+  reg: 0.05
+  sliced_projections: 8
+  cache_dir: cache
+train:
+  batch_size: 8
+  epochs: 50
+  lr: 0.0005
+  log_every: 50
+  vis_every_epochs: 10
+  vis_per_epoch: 32
+  viz_couplings: 8
+  viz_sample_steps: 200
+  viz_blur_sigma: 0.6

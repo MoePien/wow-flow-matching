@@ -1,0 +1,8 @@
+numpy
+torch>=2.0
+torchvision>=0.15
+pot>=0.9.4
+scipy
+matplotlib
+pyyaml
+tqdm
